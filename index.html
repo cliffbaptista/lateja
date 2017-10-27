@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projeto Lateja</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+</head>
+<body class="container">
+
+    <div class="jumbotron">
+        <h1>LATEJA</h1>
+    </div>
+
+    <a href="#modal-novo-contato" data-toggle="modal">Novo Contato</a>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-novo-contato" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Novo Contato</h4>
+                </div>
+                <form action="#" method="POST" id="form-contato">
+                    <div class="modal-body">
+                        <label for="nome">Nome: </label>
+                        <input type="text" class="form-control" id="nome"><br>
+
+                        <label for="email">Email: </label>
+                        <input type="email" class="form-control" id="email"><br>
+
+                        <label for="telefone">Telefone: </label>
+                        <input type="text" data-mask="(00) 0 0000-0000" class="form-control" id="telefone"><br>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="close-modal" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button class="btn btn-primary">Cadastrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <br><br><br>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="alert alert-danger hidden" id="msg-sem-contatos">
+                <strong>Nenhum Contato no Banco de Dados!</strong>
+            </div>
+
+            <div class="alert alert-success hidden" id="msg-novo-contato">
+                <strong>Novo Contato Inserido!</strong>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                    </tr>
+                    </thead>
+
+                    <tbody id="lista-contatos">
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="js/eventos.js"></script>
+    <script src="js/jquery.mask.js"></script>
+</body>
+</html>
